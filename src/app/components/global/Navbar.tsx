@@ -34,11 +34,6 @@ const Navbar = ({ currentRoute }: INavbar) => {
         },
     ]
 
-    const handleCategories = (e, id) => {
-        // console.log(e)
-        console.log('click')
-    }
-
     return (
         <Container maxWidth='xl' sx={{ position: 'sticky', top: 0, backgroundColor: 'white' }}>
             <Toolbar disableGutters>
@@ -72,7 +67,7 @@ const Navbar = ({ currentRoute }: INavbar) => {
                 <List sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4 }}>
                     {productCategories.map(category => (
                         // <Link key={menu.name} href={menu.path} style={{ textDecoration: 'none' }}>
-                        <ListItem key={category.id} disablePadding sx={{ width: 'fit-content' }} onClick={(e) => handleCategories(e, category.id)}>
+                        <ListItem key={category.id} disablePadding sx={{ width: 'fit-content' }}>
                             <ListItemButton sx={{ textAlign: 'center' }}>
                                 {/* <ListItemText primary={menu.name} /> */}
                                 <Typography
