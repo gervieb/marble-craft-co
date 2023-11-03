@@ -57,9 +57,10 @@ const Navbar = ({ currentRoute }: INavbar) => {
                     ))}
                 </List>
                 <Box sx={{ position: 'absolute', right: 0, top: 34 }}>
-                    <Icon icon="iconamoon:profile-fill" />
-                    <Icon icon='iconamoon:profile-fill' width='34px' height='34px' />
+                    <Stack direction='row' spacing={1}>
+                    <Icon icon='iconamoon:profile-fill' width='24px' height='24px' />
                     <Typography>BAG (0)</Typography>
+                    </Stack>
                 </Box>
 
             </Toolbar>

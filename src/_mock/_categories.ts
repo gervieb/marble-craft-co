@@ -3,7 +3,7 @@ export const homeCategories = [
     id: 'kichen',
     name: 'Kitchen',
     categoryName: 'kitchen',
-    url: '/assets/categories/home-categories/kitchen.png',
+    url: '/assets/categories/home-categories/kitchen.jpg',
   },
   {
     id: 'home-decor',
