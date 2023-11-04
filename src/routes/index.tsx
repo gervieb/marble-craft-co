@@ -1,6 +1,6 @@
 export const PATH_PAGE = {
-    home: '/',
-    about: '/about',
-    contact: '/contact',
-    collection: '/collection',
+  home: '/',
+  about: '/about',
+  contact: '/contact',
+  collection: '/shop',
 };
