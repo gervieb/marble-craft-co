@@ -12,7 +12,14 @@ import { jost } from '@/fonts'
 const theme = createTheme({
     typography: {
         fontFamily: jost.style.fontFamily
-    }
+    },
+    components: {
+        MuiButtonBase: {
+            defaultProps: {
+                disableRipple: true,
+            },
+        },
+    },
 })
 
 const PageLayout = ({ children, sx }: { children: ReactNode, sx?: SxProps }) => {

@@ -76,7 +76,7 @@ export const productList = [
     url: '/assets/products/collection/marble-10.png',
     name: 'Luis Chopping Board Set',
     quantity: 5,
-    price: 5000,
+    price: 1400,
     color: ['white'],
   },
   {
@@ -188,7 +188,7 @@ export const productList = [
     url: '/assets/products/collection/marble-24.png',
     name: 'Tic Tac Toe',
     quantity: 5,
-    price: 8000,
+    price: 5500,
     color: ['white'],
   },
   {
@@ -266,7 +266,7 @@ export const productList = [
   {
     id: 34,
     url: '/assets/products/collection/marble-34.png',
-    name: 'Lora Couple Toothbrush Holder Set',
+    name: 'Lora Toothbrush Holder Duo',
     quantity: 5,
     price: 750,
     color: ['white'],

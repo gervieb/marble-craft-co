@@ -16,7 +16,7 @@ const HomeCategories = () => {
                         <Image src={product.url} alt='christmas marble product' width="0"
                             height="0"
                             sizes="100vw"
-                            style={{ width: '100%', height: '340px', padding: 24, backgroundColor: '#E1D7C6' }}
+                            style={{ width: '100%', height: '300px', padding: 24, backgroundColor: '#9E9FA5' }}
                         />
                         <Typography sx={{ textAlign: 'center' }}>{product.name}</Typography>
                     </Grid>
