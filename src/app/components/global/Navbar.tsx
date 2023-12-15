@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useState, MouseEvent, MouseEventHandler } from "react";
-import { PATH_PAGE } from "@/routes";
+import React, { useState, MouseEvent, MouseEventHandler } from 'react';
+import { PATH_PAGE } from '@/routes';
 import {
   Container,
   List,
@@ -11,11 +11,12 @@ import {
   Toolbar,
   Typography,
   Stack,
-} from "@mui/material";
-import Link from "next/link";
-import Image from "next/image";
-import { Icon } from "@iconify/react";
-import { productCategories } from "@/_mock/_categories";
+  Divider,
+} from '@mui/material';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Icon } from '@iconify/react';
+import { productCategories } from '@/_mock/_categories';
 
 interface INavbar {
   currentRoute: string;
@@ -26,19 +27,19 @@ const Navbar = ({ currentRoute }: INavbar) => {
 
   const mainMenu = [
     {
-      name: "HOME",
+      name: 'HOME',
       path: PATH_PAGE.home,
     },
     {
-      name: "ABOUT",
+      name: 'ABOUT',
       path: PATH_PAGE.about,
     },
     {
-      name: "SHOP",
+      name: 'SHOP',
       path: PATH_PAGE.collection,
     },
     {
-      name: "CONTACT",
+      name: 'CONTACT',
       path: PATH_PAGE.contact,
     },
   ];
@@ -46,43 +47,47 @@ const Navbar = ({ currentRoute }: INavbar) => {
   return (
     <Container
       maxWidth="xl"
-      sx={{ position: "sticky", top: 0, backgroundColor: "#fff" }}
+      sx={{ position: 'sticky', top: 0, backgroundColor: '#fff' }}
     >
       <Toolbar disableGutters>
         <Link href="/">
-          <Box sx={{ width: "220px", mt: 2 }}>
+          <Box sx={{ width: '220px', mt: 2 }}>
             <Image
               src="/assets/marblecraftcologo.png"
               alt="Marble Craft Co. logo"
               width="0"
               height="0"
               sizes="100%"
-              style={{ width: "inherit", height: "auto" }}
+              style={{ width: 'inherit', height: 'auto' }}
             />
           </Box>
         </Link>
-        <List sx={{ display: "flex", ml: 22, mt: 2 }}>
+        <List sx={{ display: 'flex', ml: 22, mt: 2 }}>
           {mainMenu.map((menu) => (
             <Link
               key={menu.name}
               href={menu.path}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: 'none' }}
             >
               <ListItem disablePadding>
-                <ListItemButton sx={{ textAlign: "center" }}>
+                <ListItemButton sx={{ textAlign: 'center' }}>
                   {/* <ListItemText primary={menu.name} /> */}
-                  <Stack sx={{ position: "relative" }}>
+                  <Stack sx={{ position: 'relative' }}>
                     <Typography>{menu.name}</Typography>
                     {currentRoute === menu.path && (
                       <Box
                         sx={{
-                          display: "flex",
-                          alignSelf: "center",
-                          position: "absolute",
+                          display: 'flex',
+                          alignSelf: 'center',
+                          position: 'absolute',
                           top: 14,
                         }}
                       >
-                        <Icon icon="mdi:dot" width="24px" height="24px" />
+                        <Icon
+                          icon="pepicons-pop:line-x"
+                          width="24px"
+                          height="24px"
+                        />
                       </Box>
                     )}
                   </Stack>
@@ -91,20 +96,20 @@ const Navbar = ({ currentRoute }: INavbar) => {
             </Link>
           ))}
         </List>
-        <Box sx={{ position: "absolute", right: 0, top: 34 }}>
+        <Box sx={{ position: 'absolute', right: 0, top: 34 }}>
           <Stack direction="row" spacing={1}>
             <Icon icon="basil:search-outline" width="24px" height="24px" />
             <Icon icon="iconamoon:profile-fill" width="24px" height="24px" />
-            <Typography>BAG (0)</Typography>
+            {/* <Typography>BAG (0)</Typography> */}
           </Stack>
         </Box>
       </Toolbar>
-      {currentRoute === "/shop" && (
+      {currentRoute === '/shop' && (
         <List
           sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             gap: 4,
           }}
         >
@@ -112,13 +117,14 @@ const Navbar = ({ currentRoute }: INavbar) => {
             <ListItem
               key={category.id}
               disablePadding
-              sx={{ width: "fit-content" }}
+              sx={{ width: 'fit-content' }}
             >
-              <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemButton sx={{ textAlign: 'center' }}>
                 {/* <ListItemText primary={menu.name} /> */}
                 <Typography
                   sx={{
-                    "&:hover": {},
+                    color: '#7D7C7C',
+                    '&:hover': {},
                   }}
                 >
                   {category.name}

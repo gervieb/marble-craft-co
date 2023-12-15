@@ -41,7 +41,7 @@ const HomePage = () => {
               </Typography>
               {/* <Button sx={{ backgroundColor: '#30475E', color: '#E7DEC8', fontWeight: 600 }}>Check our Gallery</Button> */}
             </Box>
-            <Link href="/collection">
+            <Link href="/shop">
               <Typography sx={{ cursor: 'pointer', mt: 5 }}>
                 See Gallery
               </Typography>
