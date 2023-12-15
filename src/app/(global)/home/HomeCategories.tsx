@@ -24,10 +24,8 @@ const HomeCategories = () => {
               height="0"
               sizes="100vw"
               style={{
-                maxWidth: '100%',
-                height: '300px',
-                padding: 24,
-                // backgroundColor: '#9E9FA5',
+                width: '100%',
+                height: 'auto',
               }}
             />
             <Typography sx={{ textAlign: 'center' }}>{product.name}</Typography>
