@@ -34,9 +34,41 @@ export const productList = [
   {
     id: 5,
     url: '/assets/products/collection/marble-5.jpg',
-    name: 'Kianna Tray',
+    name: 'Kianna Square Vanity Tray',
     quantity: 5,
     price: 850,
+    color: ['white'],
+  },
+  {
+    id: 6,
+    url: '/assets/products/collection/marble-6.jpg',
+    name: 'Bianca Flower Vase',
+    quantity: 5,
+    price: 1800,
+    color: ['white'],
+  },
+  {
+    id: 7,
+    url: '/assets/products/collection/marble-7.jpg',
+    name: 'Fionna Soap Dish',
+    quantity: 5,
+    price: 1600,
+    color: ['white'],
+  },
+  {
+    id: 8,
+    url: '/assets/products/collection/marble-8.jpg',
+    name: 'Clara Vanity Tray',
+    quantity: 5,
+    price: 3200,
+    color: ['white'],
+  },
+  {
+    id: 9,
+    url: '/assets/products/collection/marble-9.jpg',
+    name: 'Marta Mortar and Pestle',
+    quantity: 5,
+    price: 900,
     color: ['white'],
   },
   // {
@@ -422,37 +454,37 @@ export const newProducts = [
   },
   {
     id: '3',
-    url: '/assets/products/christmas/christmas-7.png',
+    url: '/assets/products/christmas/christmas-3.jpg',
   },
   {
     id: '4',
-    url: '/assets/products/christmas/christmas-6.png',
+    url: '/assets/products/christmas/christmas-6.jpg',
   },
   {
     id: '5',
-    url: '/assets/products/christmas/christmas-10.png',
+    url: '/assets/products/christmas/christmas-5.jpg',
   },
 ];
 
 export const bestSellers = [
   {
     id: '1',
-    url: '/assets/products/best-seller/best-seller-1.png',
+    url: '/assets/products/best-seller/best-seller-1.jpg',
   },
   {
     id: '2',
-    url: '/assets/products/best-seller/best-seller-2.png',
+    url: '/assets/products/best-seller/best-seller-2.jpg',
   },
   {
     id: '3',
-    url: '/assets/products/best-seller/best-seller-3.png',
+    url: '/assets/products/best-seller/best-seller-3.jpg',
   },
   {
     id: '4',
-    url: '/assets/products/best-seller/best-seller-4.png',
+    url: '/assets/products/best-seller/best-seller-4.jpg',
   },
   {
     id: '5',
-    url: '/assets/products/best-seller/best-seller-5.png',
+    url: '/assets/products/best-seller/best-seller-5.jpg',
   },
 ];
