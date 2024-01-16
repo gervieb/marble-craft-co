@@ -31,17 +31,17 @@ const Navbar = ({ currentRoute }: INavbar) => {
       path: PATH_PAGE.home,
     },
     {
-      name: 'ABOUT',
-      path: PATH_PAGE.about,
-    },
-    {
       name: 'SHOP',
       path: PATH_PAGE.collection,
     },
     {
-      name: 'CONTACT',
-      path: PATH_PAGE.contact,
+      name: 'ABOUT',
+      path: PATH_PAGE.about,
     },
+    // {
+    //   name: 'CONTACT',
+    //   path: PATH_PAGE.contact,
+    // },
   ];
 
   return (
