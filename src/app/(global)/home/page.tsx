@@ -2,12 +2,13 @@
 
 import React from 'react';
 import PageLayout from '@/app/layout/PageLayout';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import NewCollection from './NewCollection';
 import BestSeller from '@/app/(global)/home/BestSeller';
 import HomeCategories from '@/app/(global)/home/HomeCategories';
 import Image from 'next/image';
 import Link from 'next/link';
+import { courgette } from '@/fonts';
 
 const HomePage = () => {
   return (
@@ -21,45 +22,84 @@ const HomePage = () => {
             justifyContent: 'space-around',
             alignItems: 'flex-start',
             height: '400px',
+            backgroundImage: `url('/assets/home-background.jpg')`,
           }}
         >
           <Box>
             <Box mt={18}>
               <Typography
                 sx={{
-                  fontSize: 24,
+                  fontSize: 32,
+                  fontFamily: courgette.style.fontFamily,
                 }}
               >
-                Discover the beauty of
+                Discover the{' '}
+                <span
+                  style={{
+                    color: '#000',
+                    fontWeight: 600,
+                  }}
+                >
+                  beauty
+                </span>{' '}
               </Typography>
               <Typography
                 sx={{
-                  fontSize: 24,
+                  fontSize: 28,
+                  fontFamily: courgette.style.fontFamily,
                 }}
               >
-                handcrafted marble
+                of handcrafted{' '}
+                <span
+                  style={{
+                    color: '#000',
+                    fontWeight: 600,
+                  }}
+                >
+                  marble
+                </span>
               </Typography>
-              {/* <Button sx={{ backgroundColor: '#30475E', color: '#E7DEC8', fontWeight: 600 }}>Check our Gallery</Button> */}
             </Box>
-            <Link href="/shop">
-              <Typography sx={{ cursor: 'pointer', mt: 5 }}>
+            <Link
+              href="/shop"
+              style={{
+                textDecoration: 'none',
+              }}
+            >
+              <Typography
+                sx={{
+                  cursor: 'pointer',
+                  mt: 5,
+                  padding: '2px 14px',
+                  border: '1px solid #747334',
+                  borderRadius: '4px',
+                  width: 'fit-content',
+
+                  '&:hover': {
+                    backgroundColor: '#747334',
+                    color: '#fff',
+                  },
+                }}
+              >
                 See Gallery
               </Typography>
             </Link>
           </Box>
-          <Box sx={{ width: '250px' }}>
+          <Box sx={{ alignItems: 'right' }}>
             <Image
               src={'/assets/home-background.jpg'}
               alt="christmas marble product"
               width="0"
               height="0"
               sizes="100vw"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: '400px' }}
             />
           </Box>
         </Box>
 
-        <HomeCategories />
+        <Box sx={{ mt: 6 }}>
+          <HomeCategories />
+        </Box>
 
         <Box sx={{ mt: 12 }}>
           <NewCollection />
