@@ -10,10 +10,18 @@ const Collection = () => {
   return (
     <PageLayout>
       <Container maxWidth="lg">
-        <Grid container spacing={2} mt={1}>
+        <Grid
+          container
+          mt={1}
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          spacing={1}
+          sx={{ textAlign: 'center' }}
+        >
           {productList.map((product) => (
-            <Grid item key={product.id} sx={{ my: 4 }} xs>
-              <Box sx={{ width: '230px' }}>
+            <Grid item key={product.id} sx={{ my: 4 }}>
+              <Box sx={{ width: '360px' }}>
                 <Image
                   src={product.url}
                   alt="christmas marble product"

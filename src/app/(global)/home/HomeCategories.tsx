@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Image from 'next/image';
 import { homeCategories } from '@/_mock/_categories';
+import ButtonComponent from '@/app/components/ButtonComponent';
 
 const HomeCategories = () => {
   return (
@@ -16,7 +17,7 @@ const HomeCategories = () => {
         }}
       >
         {homeCategories.map((product) => (
-          <Grid item key={product.id} sx={{ width: '238px', mt: 2 }} xs={3}>
+          <Grid item key={product.id} sx={{ width: '280px', mt: 2 }} xs={3}>
             <Image
               src={product.url}
               alt="christmas marble product"
@@ -25,10 +26,10 @@ const HomeCategories = () => {
               sizes="100vw"
               style={{
                 width: '100%',
-                height: 'auto',
+                height: '180px',
               }}
             />
-            <Typography sx={{ textAlign: 'center' }}>{product.name}</Typography>
+            <ButtonComponent title={product.name} />
           </Grid>
         ))}
       </Grid>

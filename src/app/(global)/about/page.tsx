@@ -4,21 +4,26 @@ import React from 'react';
 import PageLayout from '@/app/layout/PageLayout';
 import { Typography, Container, Grid } from '@mui/material';
 import Image from 'next/image';
+import { courgette } from '@/fonts';
 
 const About = () => {
   return (
     <PageLayout>
       <Container maxWidth="lg" sx={{ mt: 8 }}>
-        <Typography>OUR STORY</Typography>
-        <Grid container flexDirection="row" mt={4} mb={10}>
-          <Grid item xs>
+        <Typography
+          sx={{ fontSize: '32px', fontFamily: courgette.style.fontFamily }}
+        >
+          Our Story
+        </Typography>
+        <Grid container flexDirection="row" mt={4} mb={10} spacing={1}>
+          <Grid item xs={6}>
             <Image
               src={'/assets/marble-shop.jpg'}
               alt="marble shop"
               width="0"
               height="0"
               sizes="100vw"
-              style={{ width: 'inherit', height: 'inherit' }}
+              style={{ width: '400px', height: 'inherit' }}
             />
           </Grid>
           <Grid item xs>

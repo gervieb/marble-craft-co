@@ -32,7 +32,7 @@ const Navbar = ({ currentRoute }: INavbar) => {
     },
     {
       name: 'SHOP',
-      path: PATH_PAGE.collection,
+      path: PATH_PAGE.shop,
     },
     {
       name: 'ABOUT',
@@ -47,62 +47,75 @@ const Navbar = ({ currentRoute }: INavbar) => {
   return (
     <Container
       maxWidth="xl"
-      sx={{ position: 'sticky', top: 0, backgroundColor: '#fff' }}
+      sx={{
+        position: 'sticky',
+        top: 0,
+        backgroundColor: '#F4F0EC',
+      }}
     >
       <Toolbar disableGutters>
-        <Link href="/">
-          <Box sx={{ width: '220px', mt: 2 }}>
-            <Image
-              src="/assets/marblecraftcologo.png"
-              alt="Marble Craft Co. logo"
-              width="0"
-              height="0"
-              sizes="100%"
-              style={{ width: 'inherit', height: 'auto' }}
-            />
+        <Stack
+          direction="row"
+          display={'flex'}
+          justifyContent={'space-between'}
+          alignItems={'center'}
+          mt={2}
+          sx={{ width: '100%' }}
+        >
+          <Link href="/">
+            <Box sx={{ width: '100%', mt: 2 }}>
+              <Image
+                src="/assets/marblecraftlogo.png"
+                alt="Marble Craft Co. logo"
+                width="0"
+                height="0"
+                sizes="100%"
+                style={{ width: 'inherit', height: 'auto' }}
+              />
+            </Box>
+          </Link>
+          <List sx={{ display: 'flex' }}>
+            {mainMenu.map((menu) => (
+              <Link
+                key={menu.name}
+                href={menu.path}
+                style={{ textDecoration: 'none' }}
+              >
+                <ListItem disablePadding>
+                  <ListItemButton sx={{ textAlign: 'center' }}>
+                    {/* <ListItemText primary={menu.name} /> */}
+                    <Stack sx={{ position: 'relative' }}>
+                      <Typography>{menu.name}</Typography>
+                      {currentRoute === menu.path && (
+                        <Box
+                          sx={{
+                            display: 'flex',
+                            alignSelf: 'center',
+                            position: 'absolute',
+                            top: 14,
+                          }}
+                        >
+                          <Icon
+                            icon="pepicons-pop:line-x"
+                            width="24px"
+                            height="24px"
+                          />
+                        </Box>
+                      )}
+                    </Stack>
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            ))}
+          </List>
+          <Box>
+            <Stack direction="row" spacing={1}>
+              <Icon icon="basil:search-outline" width="24px" height="24px" />
+              <Icon icon="iconamoon:profile-fill" width="24px" height="24px" />
+              {/* <Typography>BAG (0)</Typography> */}
+            </Stack>
           </Box>
-        </Link>
-        <List sx={{ display: 'flex', ml: 22, mt: 2 }}>
-          {mainMenu.map((menu) => (
-            <Link
-              key={menu.name}
-              href={menu.path}
-              style={{ textDecoration: 'none' }}
-            >
-              <ListItem disablePadding>
-                <ListItemButton sx={{ textAlign: 'center' }}>
-                  {/* <ListItemText primary={menu.name} /> */}
-                  <Stack sx={{ position: 'relative' }}>
-                    <Typography>{menu.name}</Typography>
-                    {currentRoute === menu.path && (
-                      <Box
-                        sx={{
-                          display: 'flex',
-                          alignSelf: 'center',
-                          position: 'absolute',
-                          top: 14,
-                        }}
-                      >
-                        <Icon
-                          icon="pepicons-pop:line-x"
-                          width="24px"
-                          height="24px"
-                        />
-                      </Box>
-                    )}
-                  </Stack>
-                </ListItemButton>
-              </ListItem>
-            </Link>
-          ))}
-        </List>
-        <Box sx={{ position: 'absolute', right: 0, top: 34 }}>
-          <Stack direction="row" spacing={1}>
-            <Icon icon="basil:search-outline" width="24px" height="24px" />
-            <Icon icon="iconamoon:profile-fill" width="24px" height="24px" />
-            {/* <Typography>BAG (0)</Typography> */}
-          </Stack>
-        </Box>
+        </Stack>
       </Toolbar>
       {currentRoute === '/shop' && (
         <List
