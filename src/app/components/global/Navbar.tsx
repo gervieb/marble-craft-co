@@ -51,6 +51,7 @@ const Navbar = ({ currentRoute }: INavbar) => {
         position: 'sticky',
         top: 0,
         backgroundColor: '#F4F0EC',
+        zIndex: 10,
       }}
     >
       <Toolbar disableGutters>
