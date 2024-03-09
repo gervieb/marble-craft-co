@@ -4,8 +4,7 @@ import { Button, Html } from "@react-email/components";
 interface ITestEmail {
   name: string;
 }
-
-export const TestEmail = ({ name }: ITestEmail) => {
+const TestEmail = ({ name }: ITestEmail) => {
   return (
     <Html>
       <Button
