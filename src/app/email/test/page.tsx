@@ -14,6 +14,7 @@ const TestEmail = ({ params }: ITestEmail) => {
         Click me
       </Button>
       <p>{params.name}</p>
+      <p>Another data</p>
     </Html>
   );
 };
