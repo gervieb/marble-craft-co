@@ -2,9 +2,9 @@ import React from "react";
 import { Button, Html } from "@react-email/components";
 
 interface ITestEmail {
-  name: string;
+  params: { name: string };
 }
-const TestEmail = ({ name }: ITestEmail) => {
+const TestEmail = ({ params }: ITestEmail) => {
   return (
     <Html>
       <Button
@@ -13,7 +13,7 @@ const TestEmail = ({ name }: ITestEmail) => {
       >
         Click me
       </Button>
-      <p>{name}</p>
+      <p>{params.name}</p>
     </Html>
   );
 };

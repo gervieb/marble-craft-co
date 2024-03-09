@@ -9,7 +9,13 @@ export async function POST() {
       from: `${process.env.COMPANY_NAME} <${process.env.FROM_EMAIL}>`,
       to: `${process.env.TO_EMAIL}`,
       subject: "Hello world",
-      react: <TestEmail name="John Doe" />,
+      react: (
+        <TestEmail
+          params={{
+            name: "John Doe",
+          }}
+        />
+      ),
     });
 
     return Response.json(data);
