@@ -11,7 +11,6 @@ const nextConfig = {
         serverComponentsExternalPackages: [
             '@react-email/components',
             '@react-email/render',
-            '@react-email/tailwind'
         ]
     }
 }
