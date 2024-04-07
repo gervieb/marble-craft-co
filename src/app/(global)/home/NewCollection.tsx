@@ -11,6 +11,9 @@ const NewCollection = () => {
       <Typography sx={{ fontSize: 24, textAlign: 'center' }}>
         NEWEST COLLECTION
       </Typography>
+      <Typography mt={2} sx={{ fontSize: 18, textAlign: 'center' }}>
+        Make your home a peaceful place with our new accessories
+      </Typography>
 
       <Stack
         direction="row"
