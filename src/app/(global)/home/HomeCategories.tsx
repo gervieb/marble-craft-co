@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Grid } from "@mui/material";
 import Image from "next/image";
 import ButtonComponent from "@/app/components/ButtonComponent";
-import { supabase } from "../../../../supabase";
+import { supabase } from "../../../utils.ts/supabase";
 
 const HomeCategories = () => {
   const [categories, setCategories] = useState<
